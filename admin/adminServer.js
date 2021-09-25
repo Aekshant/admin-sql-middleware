@@ -49,7 +49,7 @@ module.exports ={
       },//end update user
       deleteUser: (data, callBack) => {
         let sql = "DELETE FROM admin_tbl WHERE id = ?";
-        pool.query(sql,[data.id],(error, results) => {
+        pool.query(sql,[data],(error, results) => {
             if (error) {
               callBack(error);
             }

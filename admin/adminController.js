@@ -83,7 +83,7 @@ module.exports ={
     });
   },//update ends
   deleteUser: (req, res) => {
-    const data = req.body;
+    const data = req.params.id;
     deleteUser(data, (err, results) => {
       if (err) {
         console.log(err);

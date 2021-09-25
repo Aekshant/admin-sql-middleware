@@ -9,9 +9,10 @@ router.get("/all", checkToken, admin, getUsers);
 router.post("/create", checkToken, admin, registration);
 router.get("/getid/:id", checkToken, admin,getUserByUserId);
 router.put("/update/:id", checkToken, admin,updateUsers);
-router.delete("/delete", checkToken,admin,deleteUser)
+router.delete("/delete/:id", checkToken,admin,deleteUser)
 
 router.post("/login",login);
+ 
 
 
 module.exports=router;
